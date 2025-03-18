@@ -1,0 +1,49 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state", 
+        // File ini mengunci dependensi proyek ke versi yang sudah diketahui, 
+        // sehingga memastikan lingkungan pengembangan tetap konsisten.
+
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies", 
+        // Dokumentasi Composer mengenai cara kerja file composer.lock.
+
+        "This file is @generated automatically" 
+        // File ini dibuat secara otomatis oleh Composer dan tidak boleh diedit secara manual.
+    ],
+
+    "content-hash": "d751713988987e9331980363e24189ce",
+    // Hash ini digunakan untuk mendeteksi perubahan dalam file composer.json.
+    // Jika ada perubahan, Composer akan memperbarui dependensi dan menyesuaikan composer.lock.
+
+    "packages": [], 
+    // Daftar paket atau library yang telah diinstal dalam mode produksi.
+    // Kosong berarti belum ada dependensi yang diinstal.
+
+    "packages-dev": [], 
+    // Daftar paket atau library yang telah diinstal dalam mode pengembangan (require-dev).
+    // Kosong berarti belum ada dependensi pengembangan.
+
+    "aliases": [], 
+    // Alias untuk package jika ada versi khusus yang digunakan.
+
+    "minimum-stability": "stable", 
+    // Menentukan bahwa hanya dependensi dengan status "stable" yang dapat diinstal.
+
+    "stability-flags": {}, 
+    // Konfigurasi tambahan terkait stabilitas dependensi.
+
+    "prefer-stable": false, 
+    // Jika true, Composer akan lebih memilih versi stable ketika ada beberapa versi yang tersedia.
+
+    "prefer-lowest": false, 
+    // Jika true, Composer akan menginstal versi terendah yang memenuhi persyaratan dependensi.
+
+    "platform": {}, 
+    // Konfigurasi platform PHP atau ekstensi yang diperlukan oleh proyek.
+
+    "platform-dev": {}, 
+    // Konfigurasi platform khusus untuk mode pengembangan.
+
+    "plugin-api-version": "2.6.0" 
+    // Versi API Plugin Composer yang digunakan, menunjukkan kompatibilitas dengan versi Composer tertentu.
+}
