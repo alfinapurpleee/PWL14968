@@ -46,9 +46,10 @@ class Model_mhs
     {
         $sql = "UPDATE mahasiswa SET deleted_at = NOW() WHERE id = :id";
         $stmt = $this->dbh->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id);
         return $stmt->execute();
     }
+    
 
     // Fungsi untuk memperbarui data mahasiswa yang belum dihapus
     function perbaruiData($id, $nim, $nama)

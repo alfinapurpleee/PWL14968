@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /**
  * Bootstrap page
  * Require file autoload dari vendor atau manual
@@ -9,10 +9,11 @@ $autoloadPath = __DIR__ . '/vendor/autoload.php';
 if (file_exists($autoloadPath)) {
     require_once $autoloadPath;
 } else {
-    die("Error: Autoload file tidak ditemukan! Pastikan sudah menjalankan 'composer dump-autoload'.");
+    // Jika tidak pakai Composer, include manual controller
+    require_once __DIR__ . '/app/Controllers/Mahasiswa.php';
 }
 
-// Pastikan namespace Controllers ada
+// Pastikan namespace sesuai dengan struktur folder
 use Controllers\Mahasiswa;
 
 try {
@@ -21,8 +22,8 @@ try {
      */
     $controller = new Mahasiswa();
     
-    // Tentukan bagaimana halaman akan di-load
-    $action = $_GET['act'] ?? 'home';
+    // Gunakan filter_input() untuk keamanan
+    $action = filter_input(INPUT_GET, 'act', FILTER_SANITIZE_STRING) ?? 'home';
 
     switch ($action) {
         case 'home': 
@@ -37,7 +38,7 @@ try {
             $controller->show_data();
             break;
 
-        case 'delete':  // Tambahkan aksi hapus agar berfungsi
+        case 'delete':  
             $controller->delete();
             break;
 
